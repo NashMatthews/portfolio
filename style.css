@@ -1,0 +1,295 @@
+/* div class - margined container for everything 
+
+        div class left - flex column - name, nav bar, about me/my story in relation to the page
+        
+                div id - name
+                        h1 - first name
+                        h2 - last name
+
+                nav class - navbar
+                        a href - home, coder, musician, designer
+
+                div class - about me/my story in relation to the page
+
+        div class right - photo of me/examples of my work, page title
+
+                div class - photo of me/examples of my work
+
+                div id - page title
+*/
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+    .maincontainer {
+        /* background-color: aquamarine; */
+        display: flex;
+        width: 97%;
+        height: 95vh;
+        /* width: 1870px; */
+        /* height: 870px; */
+        border-color: black;
+        border: 5px;
+        margin: 15px;
+        justify-content: space-between;
+    }
+
+        /* .left {
+            display: flex;
+            width: 45%;
+            flex-direction: column;
+            justify-content: left;
+        } */
+        .Left {
+            display: flex;
+            flex-direction: column;
+            width: 36%;
+            /* height: 100%; */
+            padding: 15px;
+            border-style: dashed;
+            border-width: 5px;
+            /* background-color: blueviolet; */
+          }
+
+            .nameandnav {
+                display: flex;
+                width: 95%;
+                height: 25%;
+                flex-direction: row;
+                align-content: space-between;
+                padding: 10px;
+                /* border-style: dotted; */
+                line-height: 0;
+            }
+
+                /* #name {
+                    display: flex;
+                    font-family: 'Jost', sans-serif;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 15px;
+                } */
+                .name {
+                    display: flex;
+                    flex-direction: unset;
+                    width: 50%;
+                    height: 200px;
+                    /* text-align: left; */
+                    padding: 0px 10px 0px 10px;
+                    /* border-style: solid; */
+                    border-width: 5pt;
+                    /* background-color: brown; */
+                  }
+
+                    h1 {
+                        font-family: 'Jost', sans-serif;
+                        font-size: 40px;
+                    }
+
+                #navbar {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    height: 200px;
+                    font-family: 'Jost', sans-serif;
+                    font-size: 20pt;
+                    /* padding: 20px; */
+                    /* background-color: aquamarine; */
+                }
+
+                    #navbar a {
+                        font-family: 'Jost', sans-serif;
+                        font-size: 20pt;
+                        text-decoration: none;
+                    }
+
+                    #navbar a:visited {
+                        color: black;
+                    }
+
+                    #navbar a.navHome:hover {
+                        color:coral
+                    }
+
+                    #navbar a.navCoder:hover {
+                        color:darkturquoise
+                    }
+
+                    #navbar a.navMusic:hover {
+                        color:deeppink
+                    }
+
+                    #navbar a.navDesign:hover {
+                        color: mediumspringgreen;
+                    }
+
+                .about {
+                    display: flex;
+                    overflow-y: scroll;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 600px;
+                    font-family: 'Jost', sans-serif;
+                    font-size: 17.3pt;
+                    text-align: justify;
+                    justify-content: right;
+                    padding-top: 5px;
+                    /* background-color: aquamarine; */
+                }
+
+        .Middle {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            justify-content: space-around;
+            align-items: center;
+            color: cadetblue;
+            /* background-color: bisque; */
+            }
+
+            .stillLogo {
+                /* height: 20px; */
+                width: 300px;
+                pointer-events: none;
+                }
+
+            .nashlogo {
+                /* height: 20px; */
+                width: 100px;
+                pointer-events: none;
+                }
+            
+            .logoContainer {
+                width: 100px;
+                /* background-color: darkkhaki; */
+            }
+
+                @media (prefers-reduced-motion: no-preference) {
+                .nashlogo {
+                    animation: nashlogo-spin infinite 2s linear;
+                }
+                }
+
+                @keyframes nashlogo-spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(-360deg);
+                }
+                }
+
+        /* .right {
+            display: flex;
+            width: 45%;
+            flex-direction: column;
+            justify-content: right;
+        } */
+
+        .Right {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            width: 40%;
+            /* height: 100%; */
+            padding-top: 10px;
+            border-style: dashed;
+            border-width: 5px;
+            }
+
+            .musicplayer {
+                display: flex;
+                justify-content: right;
+                padding: 15px;
+                flex-direction: column;
+            }
+
+            .examples {
+                display: flex;
+                overflow-y: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                flex-direction: row;
+                justify-content: center;
+                height: 80%;
+                font-family: 'Jost', sans-serif;
+                font-size: 25px;
+                padding: 15px;
+            }
+
+            examples::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* .column {
+
+            } */
+
+            #covers {
+                width: 200px;
+                height: 200px;
+                filter: grayscale(100%) blur(3px);
+                /* filter: blur(3px); */
+                transition: .5s ease;
+            }
+
+            #covers:hover {
+                filter: grayscale(0%) blur(0px);
+                box-shadow: 3px 3px 6px gray;
+                /* width: 202px;
+                height: 202px; */
+            }
+            
+            .ts {
+                clip: rect(0px,640px,640px,0px);
+            }
+
+            /* #lfttr {
+                width: 200px;
+                height: 200px;
+                filter: grayscale(100%);
+                transition: 1s ease;
+            }
+
+            #lfttr:hover {
+                filter: grayscale(15%);
+            }
+
+            #no {
+                width: 200px;
+                height: 200px;
+                filter: grayscale(100%);
+                transition: 1s ease;
+            }
+
+            #no:hover {
+                filter: grayscale(15%);
+            } */
+
+            /* h2 {
+                font-family: 'Jost', sans-serif;
+                font-size: 120px;
+            } */
+
+            .pagetitle {
+                display: flex;
+                font-family: 'Jost', sans-serif;
+                font-size: 140px;
+                text-align: justify;
+                /* background-color: blueviolet; */
+                width: 100%;
+                height: 18%;
+                /* margin-right: 25px; */
+                justify-content: center;
+                align-content: flex-end;
+                padding-bottom: 40px;
+            }
